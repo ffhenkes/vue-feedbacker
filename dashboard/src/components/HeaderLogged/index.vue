@@ -6,12 +6,12 @@
     <div class="flex">
       <ul class="flex list-none">
         <li
-          @click="redirect('Home')"
+          @click="redirect('Credentials')"
           class="px-6 py-2 mr-2 font-bold text-white rounded-full cursor-pointer focus:outline-none">
           Credentials
         </li>
         <li
-          @click="redirect('Credentials')"
+          @click="redirect('Home')"
           class="px-6 py-2 mr-2 font-bold text-white rounded-full cursor-pointer focus:outline-none">
           Feedbacks
         </li>

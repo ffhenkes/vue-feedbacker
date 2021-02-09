@@ -29,7 +29,12 @@
 
       <div class="flex py-3 pl-5 mt-2 justify-between rounded items-center bg-brand-grey w-full lg:w-1/2">
         <span v-if="state.hasErrors">Error loading apiKey</span>
-        <span v-else>{{ store.User.currentUser.apiKey }}</span>
+        <span
+          id="api-key"
+          v-else
+        >
+          {{ store.User.currentUser.apiKey }}
+        </span>
         <div class="flex ml-20 mr-5" v-if="!state.hasErrors">
           <icon
             @click="handleCopy"
@@ -39,6 +44,7 @@
             class="cursor-pointer"
           />
           <icon
+            id="generate-api-key"
             @click="handleGenerateApiKey"
             name="loading"
             :color="brandColors.graydark"

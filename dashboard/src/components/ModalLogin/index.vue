@@ -1,5 +1,5 @@
 <template>
-<div class="flex justify-between">
+<div class="flex justify-between" id="modal-login">
   <h1 class="text-4xl font-black text-gray-800">
     Login
   </h1>
@@ -14,10 +14,14 @@
   <form @submit.prevent="handleSubmit">
     <label class="block">
       <span class="text-lg font-medium text-gray-800">E-mail</span>
-      <input type="email" class="block w-full px-4 py-3 text-lg bg-gray-100 border-2 border-transparent rounded" placeholder="john.doe@gmail.com"
+      <input
+        id="email-field"
+        type="email" class="block w-full px-4 py-3 text-lg bg-gray-100 border-2 border-transparent rounded" placeholder="john.doe@gmail.com"
         :class="{ 'border-brand-danger': !!state.email.errorMessage }"
         v-model="state.email.value">
-      <span v-if="!!state.email.errorMessage"
+      <span
+        id="email-error"
+        v-if="!!state.email.errorMessage"
         class="block font-medium text-brand-danger">
         {{ state.email.errorMessage }}
       </span>
@@ -26,6 +30,7 @@
     <label class="block mt-9">
         <span class="text-lg font-medium text-gray-800">Password</span>
         <input
+          id="password-field"
           v-model="state.password.value"
           type="password"
           :class="{
@@ -42,7 +47,9 @@
         </span>
       </label>
 
-    <button type="submit" class="px-8 py-3 mt-10 text-2xl text-white font-bold rounded-full bg-brand-main focus:outline-none transition-all duration-150"
+    <button
+      id="submit-button"
+      type="submit" class="px-8 py-3 mt-10 text-2xl text-white font-bold rounded-full bg-brand-main focus:outline-none transition-all duration-150"
       :disabled="state.isLoading"
       :class="{
         'opacity-50': state.isLoading

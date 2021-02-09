@@ -1,0 +1,5 @@
+* vue-feedbacker
+
+This is an example project using vue3.
+
+It is part of the free vuejsbrasil training https://igorhalfeld.teachable.com/courses/enrolled/1283923

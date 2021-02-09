@@ -5,3 +5,4 @@ backend/node_modules/*
 **/__snapshots__
 **/tests/e2e/videos
 **/.vercel
+**/dist

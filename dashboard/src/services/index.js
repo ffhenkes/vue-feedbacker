@@ -6,7 +6,7 @@ import FeedbacksService from './feedbacks'
 import { setGlobalLoading } from '../store/global'
 
 const API_ENVS = {
-  production: 'https://feedbacker-backend-qaq8d4fb1.vercel.app/',
+  production: 'https://feedbacker-backend-theta.vercel.app',
   local: 'http://localhost:3000'
 }
 

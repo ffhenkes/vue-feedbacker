@@ -1,7 +1,7 @@
 const APP_URL = process.env.APP_URL || 'http://localhost:8080'
 
 describe('Credentials', () => {
-  it('shouldGEnerateApiKey', () => {
+  it('shouldGenerateApiKey', () => {
     cy.visit(APP_URL)
     cy.get('#header-login-button').click()
     cy.get('#modal-login')

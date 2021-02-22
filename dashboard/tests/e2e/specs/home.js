@@ -27,8 +27,10 @@ describe('Home', () => {
     cy.get('#header-login-button').click()
     cy.get('#modal-login')
 
-    cy.get('#email-field').type('john.doe@gmail.com')
-    cy.get('#password-field').type('12345')
+    //cy.get('#email-field').type('john.doe@gmail.com')
+    //cy.get('#password-field').type('12345')
+    cy.get('#email-field').type('igor@igor.me')    
+    cy.get('#password-field').type('1234')
     cy.get('#submit-button').click()
 
     cy.url().should('include', '/feedbacks')
@@ -50,8 +52,10 @@ describe('Home', () => {
     cy.get('#header-login-button').click()
     cy.get('#modal-login')
 
-    cy.get('#email-field').type('john.doe@gmail.com')
-    cy.get('#password-field').type('12345')
+    //cy.get('#email-field').type('john.doe@gmail.com')
+    //cy.get('#password-field').type('12345')
+    cy.get('#email-field').type('igor@igor.me')
+    cy.get('#password-field').type('1234')
     cy.get('#submit-button').click()
 
     cy.url().should('include', '/feedbacks')
